@@ -6,9 +6,11 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "clsx": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.69.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -20,8 +22,29 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "airbnb",
+      "airbnb/hooks",
+      "prettier"
+    ],
+    "rules": {
+			"no-console": 0,
+			"react/jsx-filename-extension": [
+				1,
+				{
+					"extensions": [
+						".js",
+						".jsx"
+					]
+				}
+			],
+			"react/react-in-jsx-scope": "off",
+			"import/prefer-default-export": "off",
+			"react/function-component-definition": "off",
+			"react/jsx-props-no-spreading": "off",
+			"react/no-unescaped-entities": "off",
+			"react/button-has-type": "off"
+		}
   },
   "browserslist": {
     "production": [
@@ -34,5 +57,28 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "webpack": "^5.89.0"
+  },
+  "lint-staged": {
+		"*.{js,jsx}": "npm run lint",
+		"*.{js,jsx,css,md,html,json}": "npm run format"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"homepage": "./",
+	"overrides": {
+		"react-refresh": "0.11.0"
+	}
 }
