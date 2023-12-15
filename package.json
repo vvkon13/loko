@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -17,7 +18,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "format": "prettier . --write --ignore-path ./.prettierignore",
+    "commit": "cz",
+    "lint": "eslint . --ext .js,.jsx .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -28,23 +34,23 @@
       "prettier"
     ],
     "rules": {
-			"no-console": 0,
-			"react/jsx-filename-extension": [
-				1,
-				{
-					"extensions": [
-						".js",
-						".jsx"
-					]
-				}
-			],
-			"react/react-in-jsx-scope": "off",
-			"import/prefer-default-export": "off",
-			"react/function-component-definition": "off",
-			"react/jsx-props-no-spreading": "off",
-			"react/no-unescaped-entities": "off",
-			"react/button-has-type": "off"
-		}
+      "no-console": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "import/prefer-default-export": "off",
+      "react/function-component-definition": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/no-unescaped-entities": "off",
+      "react/button-has-type": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -59,6 +65,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-named-exports-order": "^0.0.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -69,16 +76,16 @@
     "webpack": "^5.89.0"
   },
   "lint-staged": {
-		"*.{js,jsx}": "npm run lint",
-		"*.{js,jsx,css,md,html,json}": "npm run format"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
-	"homepage": "./",
-	"overrides": {
-		"react-refresh": "0.11.0"
-	}
+    "*.{js,jsx}": "npm run lint",
+    "*.{js,jsx,css,md,html,json}": "npm run format"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "homepage": "./",
+  "overrides": {
+    "react-refresh": "0.11.0"
+  }
 }
