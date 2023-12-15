@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/loko/static/css/main.f855e6bc.css",
+    "main.js": "/loko/static/js/main.56cdf51b.js",
+    "index.html": "/loko/index.html",
+    "main.f855e6bc.css.map": "/loko/static/css/main.f855e6bc.css.map",
+    "main.56cdf51b.js.map": "/loko/static/js/main.56cdf51b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.56cdf51b.js"
+  ]
+}
